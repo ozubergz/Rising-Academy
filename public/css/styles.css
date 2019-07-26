@@ -1,67 +1,210 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+  color: #4c1174 !important;
+}
 
-.bg-image {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+.nav-logo {
+  width: 35px;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  color: #313848 !important;
+}
+
+.nav-login {
+  color: #ff4949 !important;
+}
+
+.nav-sign-up {
+  color: #614ad3 !important;
+}
+
+.nav-contact {
+  color: #009975 !important;
+}
+
+.nav-apply {
+  color: #ff6337 !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.top-heading {
+  padding: 0;
+  color: white;
+}
+
+.top-heading-bg-image {
   background-image: url('/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
-.main-heading {
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  opacity: 0.8;
-  background-color: #fdeaab;
+.top-heading-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 0;
 }
 
-.main-heading .top-heading {
-  font-size: 5vw;
-  margin-bottom: -12px;
+.top-heading-texts{
+  position: relative;
+  padding: 8%;
+  z-index: 1;
 }
 
-.main-heading .bottom-heading {
-  font-size: 3vw;
-  margin-left: 2px;
+.top-heading h1 {
+  font-size: 3.5rem;
+  margin-bottom: -0.187em;
+  z-index: 1;
+  font-family: 'Bitter', serif;
 }
 
-.box {
-  background-color: white;
-  border: 1px solid black;
-  text-align: center;
-  
+.top-heading h2 {
+  font-size: 2rem;
+  font-family: 'Bitter', serif;
 }
 
-.box-2 {
-  /* width: 90%; */
-  background: red;
-  border-radius: 10px;
+.top-heading p {
+  font-size: 1rem;
+  font-family: 'Crimson Text',
+  serif;
 }
 
+.section-1 {
+  background: gray;
+  padding: 0;
+}
 
-/* For mobile phones: */
-@media (min-width: 481px) and (max-width: 767px) {
-  .main-heading .top-heading {
-    font-size: 5vw;
-    margin-bottom: -5px;
+.section-1-bg-img {
+  background-image: url('/images/books-close-up.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-1 h1{
+  font-size: 2rem;
+  font-family: 'Bitter',
+  serif;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.section-1-texts {
+  position: relative;
+  padding: 8% 0 8% 8%;
+  left: 50%;
+  width: 50%;
+}
+
+.section-1 .btn {
+  width: 70%;
+  -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+}
+
+.section-2 {
+  padding: 0;
+}
+
+.toy-van-container {
+  width: 100%;
+  background: gray;
+}
+
+.toy-van {
+  width: 80rem;
+  background: gray;
+  padding: 0%;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  transform: translate(0.1rem, 0.2rem);
+  outline: none;
+  box-shadow: none;
+}
+
+footer {
+  font-size: 0.75rem;
+  background-color:white;
+  color: #696464;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/* For Mobile */
+@media (min-width: 320px) and (max-width: 767px) {
+  :root {
+    font-size: 50%;
   }
-
-  .main-heading .bottom-heading {
-    font-size: 3vw;
-    margin-left: 0px;
-  }
   
+  .section-1-texts {
+    left: 39%;
+    width: 61%;
+  }
 }
 
 /* For tablet */
-@media (min-width: 768px) and (min-width: 1024px) {
-  .main-heading .top-heading {
-    margin-bottom: -3px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    font-size: 100%
   }
 
-  .main-heading .bottom-heading {
-    margin-left: 0px;
+  .section-1 h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    position: relative;
+    left: 40%;
+  }
+}
+
+
+/* For laptop and Desktop */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  :root {
+    font-size: 100%; 
+  }
+
+  .navbar-brand {
+    position: relative;
+    left: 42%;
+  }
+
+}
+
+/* For resolution higher */
+@media(min-width: 1281px) {
+  :root {
+    font-size: 115%;
+  }
+
+  .navbar-brand {
+    position: relative;
+    left: 45%;
+  }
+
+  .section-1 .btn {
+    width: 55%;
   }
 
 }

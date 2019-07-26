@@ -1,5 +1,5 @@
-// const $ = require('jquery');
+import $ from 'jquery';
 
-// $(document).ready(function() {
-//   $('.carousel').carousel('pause')
-// });
+$(document).ready(function() {
+  $('.carousel').carousel('pause')
+});
