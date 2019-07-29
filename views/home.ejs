@@ -3,54 +3,117 @@
   <div class="container-fluid">
 
     <div class="row">
-
       <div class="top-heading col-sm-12">
         <div class="top-heading-bg-image">
           <div class="top-heading-overlay"></div>
           <div class="top-heading-texts">
-            <h1>RISING ACADEMY</h1>
-            <h2>LEARNING CENTER</h2>
-            <p>"We're on a mission to help kids to improve on their math, writing and english." <br>
-              "We help them to better their progress in homework and thrive them to learn."</p>
-            <h2>Sign up to apply for your kids.</h2>
+            <div class="title-heading">
+              <h1>RISING ACADEMY</h1>
+              <h2>LEARNING CENTER</h2>
+            </div>
+            <div class="title-captions">
+              <p>"We're on a mission to help kids to improve on their math, writing and english." <br>
+                "We help them to better their progress in homework and thrive them to learn."</p>
+              <h2>Sign up to apply for your kids.</h2>
+            </div>
+          </div>
+          <div class="top-login-modal">
+            <form class="top-form" action="/login" method="POST">
+              <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" class="form-control" id="login-email" name="email">
+              </div>
+              <div class="form-group mb-5">
+                <label for="login-password">Password</label>
+                <input type="password" class="form-control" id="login-password" name="password">
+              </div>
+              <button type="submit" class="btn btn-success">Login</button>
+              <h6 class="or text-center mt-1">or</h6>
+              <button type="button" class="btn btn-primary">Sign Up</button>
+            </form>
+          </div>
+          <div class="text-center top-appear">
+            <h1>"We're on a mission to help kids to improve on their math, writing and english. We help them to better their progress in homework and thrive them to learn."</h1>
+            <button type="button" class="btn btn-primary">Sign up to Apply</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cards">
+        <div class="card">
+          <div class="card-center-img">
+            <img class="card-img-top" src="/images/math.png" alt="Card geometry image">
+          </div>
+          <div class="card-body">
+            <h5>PRIVATE TUTORING</h5>
+            <h6>Engaging</h6>
+            <p>No matter how much your child is struggling,
+               Rising Academy provides private tutoring.
+               Private tutoring is the extra mile that your
+               child needs if he or she has hard time
+               learning in a classroom environment.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-center-img">
+            <img class="card-img-top" src="/images/teach.png" alt="Card teach image">
+          </div>
+          <div class="card-body">
+            <h5>TUTORING</h5>
+            <h6>K-8th Grade</h6>
+            <p>Here at Rising Academy, we provide loving
+               tutors to help children with their homework. 
+               Tutors are experienced teachers that guide 
+               students to prepare themselves to 
+               become more academically succesful outside 
+               of the afterschool program.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-center-img">
+            <img class="card-img-top" src="/images/book-boy.png" alt="Card Boy Reading image">
+          </div>
+          <div class="card-body">
+            <h5>LANGUAGE</h5>
+            <h6>ELA/Chinese</h6>
+            <p>We provide courses that are consist of
+               teaching Chinese Language and also English
+               Language. If you're child or children is
+               struggling with understanding English or
+               Chinese, we have the right tutors for you.</p>
           </div>
         </div>
       </div>
 
       <div class="section-1 col-sm-12">
         <div class="section-1-bg-img">
-          <div class="section-1-texts">
+          <div class="section-1-contents">
             <h1>Let your kids meet their <br>
               grade-level standards by <br>
               joining us.</h1>
-              <button type="button" class="btn btn-primary">Sign Up</button>
-              <!-- <div class="section-1-btns"> -->
-                <!-- <button type="button" class="btn btn-success">Primary</button> -->
-                
-                 <!-- <a class="btn btn-block btn-social btn-facebook" role="button">
-                   <span class="fab fa-facebook"></span> Sign in with Facebook
-                 </a>
-                 <a class="btn btn-block btn-social btn-google" role="button">
-                   <span class="fab fa-google"></span> Sign in with Google
-                 </a> -->
-              <!-- </div> -->
+            <button type="button" class="btn btn-primary">
+              Apply</button>
           </div>
         </div>
       </div>
 
-      <div class="section-2 col-sm-2">
-        <div class="toy-van-container">
-          <img class="toy-van" src="images/toy-van.png" alt="Toy Van">
+      <div class="section-2 col-sm-12">
+        <div class="section-2-bg-img">
+          <div class="section-2-contents">
+            <h1>Location</h1>
+            <h3>18-25 126th Street <br>
+              College Point, NY 11356 <br>
+              United States</h3>
+            <button type="button" class="btn btn-primary">
+              <i class="fas fa-location-arrow"></i> Get Directions</button>
+          </div>
         </div>
-        
       </div>
-
     </div>
 
   </div>
-  
-
-  <!-- </div> -->
-  
   
 <%- include("partials/footer.ejs")-%>
