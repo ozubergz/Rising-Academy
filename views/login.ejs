@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs")-%>
+<div class="container-fluid login-pg-body">
+
+  <div class="container row">
+
+    <div class="login-modal col-lg-6">
+      <form action="/login" method="POST">
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" class="form-control" id="login-email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" class="form-control" id="login-password" name="password">
+        </div>
+        <button type="submit" class="btn btn-success login-btn">Login</button>
+      </form>
+    </div>
+
+    <div class="login-social-group col-lg-6">
+      <a class="btn btn-block btn-google mb-3" href="/auth/google" role="button">
+        <i class="fab fa-google"></i> Login with Google
+      </a>
+      <a class="btn btn-block btn-facebook" href="/auth/facebook" role="button">
+        <i class="fab fa-facebook"></i> Login with Facebook
+      </a>
+    </div>
+
+
+  </div>
+
+</div>
+<%- include("partials/footer.ejs")-%>

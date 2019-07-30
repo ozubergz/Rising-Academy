@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
 .navbar-brand {
   font-weight: bold;
@@ -42,38 +47,49 @@
   z-index: 0;
 }
 
-.top-heading-texts{
+.top-heading-contents {
   position: relative;
-  padding: 11% 8% 11% 8%;
   z-index: 1;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: space-around;
+  -ms-flex-align: space-around;
+  align-items: space-around;
+  padding: 6rem 0 6rem 0;
 }
 
-.top-heading h1 {
+.top-texts {
+  width: 50%;
+  padding: 4rem;
+}
+
+.top-texts h1 {
   font-size: 3.5rem;
   margin-bottom: -0.187em;
   z-index: 1;
   font-family: 'Bitter', serif;
 }
 
-.top-heading h2 {
+.top-texts h2 {
   font-size: 2rem;
   font-family: 'Bitter', serif;
 }
 
-.top-heading p {
+.top-texts p {
   font-size: 1rem;
   font-family: 'Crimson Text', serif;
 }
 
 .top-login-modal {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
   border-left: 1px solid white;
-  width: 32rem;
-  padding: 3rem;
-  margin-top: 2rem;
+  width: 50%;
 }
 
 .top-form {
@@ -82,7 +98,7 @@
   border-radius: 1%;
   background-color: rgba(255, 255, 255, 0.6);
   color: rgb(63, 63, 63);
-  width: 17rem;
+  width: 18rem;
 }
 
 .top-form label {
@@ -91,6 +107,10 @@
 
 .top-form .btn {
   width: 100%;
+}
+
+.top-form a {
+  text-decoration: none;
 }
 
 .top-form .btn-success {
@@ -119,27 +139,40 @@
   background-repeat: no-repeat;
 }
 
+.section-1-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  padding: 10rem 0rem 12rem 0;
+}
+
 .section-1 h1 {
   font-size: 2rem;
   font-family: 'Bitter', serif;
-  margin-bottom: 1em;
-  position: relative;
-  left: 60%;
-  width: 12em;
+}
+
+.section-1 p {
+  font-size: 1.2rem;
+  font-family: 'Crimson Text', serif;
 }
 
 .section-1 .btn {
-  position: relative;
-  left: 60%;
+  margin-right: 1rem;
   width: 23rem;
+  font-weight: bold;
   -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
   -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
   box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
-  font-weight: bold;
-}
-
-.section-1-contents {
-  padding: 15% 0 15% 0;
 }
 
 .section-2 {
@@ -154,12 +187,14 @@
 }
 
 .section-2-contents {
-  padding: 14% 0 14% 10%;
-  width: 50%;
-}
-
-.section-2-texts {
-  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 12rem 0 12rem 8rem;
 }
 
 .section-2 h1 {
@@ -167,34 +202,37 @@
 }
 
 .section-2 h3 {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   font-family: 'Crimson Text', serif;
   font-weight: bold;
 }
 
 .section-2 .btn {
-  width: 60%;
+  font-weight: bold;
+  width: 17rem;
   background-color: #ff8a5c;
   border-color: #ff8a5c;
-  font-weight: bold;
   -webkit-box-shadow: -0.125rem 0.3125rem 0px 0px rgb(92, 61, 20);
   -moz-box-shadow: -0.125rem 0.3125rem 0px 0px rgb(92, 61, 20);
   box-shadow: -0.125rem 0.3125rem 0px 0px rgb(92, 61, 20);
 }
 
 .signup-pg-body {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f090d9), to(#59d4e8));
+  background-image: -o-linear-gradient(top left, #f090d9, #59d4e8);
   background-image: linear-gradient(to bottom right, #f090d9, #59d4e8);
-  padding: 1rem;
+  padding-top: 2rem;
+  height: 100%;
+  min-height: 100%;
 }
 
 .signup-modal {
-  padding: 2rem;
+  padding: 1rem;
   width: 25rem;
   margin: 0 auto;
   border: 0.125rem solid white;
-  border-radius: 5%;
+  border-radius: 3%;
   color: white;
-  font-family: 'Bitter', serif;
 }
 
 .signup-modal .btn {
@@ -206,11 +244,12 @@
 .signup-modal .star-logo {
   width: 4rem;
   position: relative;
-  left: 8.5rem;
+  left: 9.5rem;
 }
 
 .signup-modal h5 {
   text-align: center;
+  font-family: 'Bitter', serif;
 }
 
 .signup-modal input {
@@ -245,7 +284,12 @@ hr {
 .section-cards {
   background-color: #ffb6b9;
   padding: 6% 0 6% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -278,6 +322,56 @@ hr {
   color: rgb(73, 73, 73);
 }
 
+.login-pg-body {
+  height: 100%;
+  min-height: 100%;
+  padding-top: 4rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f090d9), to(#59d4e8));
+  background-image: -o-linear-gradient(top left, #f090d9, #59d4e8);
+  background-image: linear-gradient(to bottom right, #f090d9, #59d4e8);
+}
+
+.login-pg-body .container {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.login-pg-body .btn {
+  -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+}
+
+.login-modal {
+  padding: 5rem;
+}
+
+.login-modal .btn {
+  width: 100%;
+  background-color: #40c3a2;
+  border-color: #40c3a2;
+}
+
+.login-modal .btn:hover {
+  background-color: #2c7965;
+  border-color: #2c7965;
+}
+
+.login-social-group {
+  border-left: 2px solid white;
+  padding: 5rem;
+}
+
+.login-social-group .btn-google {
+  margin-top: 2rem;
+  background-color: rgb(245, 96, 96);
+  border-color: rgb(245, 96, 96);
+}
+
+.login-social-group .btn-facebook {
+  background-color: rgb(112, 183, 241);
+  border-color: rgb(112, 183, 241);
+}
 
 footer {
   font-size: 0.75rem;
@@ -289,123 +383,90 @@ footer {
 }
 
 /* For Mobile */
-@media (max-width: 360px) {
+@media (min-width: 320px) and (max-width: 767px) {
   :root {
-    font-size: 50%
+    font-size: 60%;
   }
 
-  .top-appear{
-    display: block;
-  }
-
-  .top-heading-texts {
-    padding: 0;
-    display: block;
-  }
-
-  .title-heading {
-    background-color: rgba(255, 255, 0, 0.4);
-    padding: 1rem;
-    width: 100%;
-    color: black;
-  }
-
-  .title-captions {
-    display: none;
+  .nav-link {
+    font-size: 1.5rem;
   }
 
   .top-login-modal {
     display: none;
   }
 
+  .top-texts {
+    padding: 0;
+    width: 100%;
+  }
+
+  .top-texts .title-captions {
+    display: none;
+  }
+
+  .top-heading-contents {
+    padding: 0;
+  }
+
+  .title-heading {
+    background-color: rgba(255, 255, 0, 0.4);
+    color: black;
+    margin-bottom: 2rem;
+  }
+
   .top-appear {
     display: block;
     position: relative;
     z-index: 1;
-    padding: 1rem;
-    margin-top: 4rem;
+    margin: 0 auto;
+  }
+
+  .top-appear h1{
+    padding: 0.5rem;
   }
 
   .top-appear .btn {
     font-size: 2rem;
-    width: 10em;
-    padding: 1em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
-
-  .section-1 h1 {
-    left: 40%;
-  }
-
-  .section-1 .btn {
-    left: 40%;
+    font-weight: 100;
+    padding: 0.5em;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+    -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+    box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
   }
 
   .section-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .section-1-contents {
+    padding: 5rem 0 5rem 0;
+  }
+
+  .section-1 .btn {
+    font-size: 2rem;
+    font-weight: 100;
+    padding: 0.5em;
   }
 
   .section-2-contents {
-    width: 55%;
-  }
-}
-
-@media (min-width: 375px) and (max-width: 767px) {
-  :root {
-    font-size: 50%;
+    padding: 5rem 0 5rem 2rem;
   }
 
-  .top-appear {
-    display: block;
+  .section-2 h3 {
+    margin-bottom: 2rem;
   }
 
-  .top-heading-texts {
-    padding: 0;
-    display: block;
-  }
-
-  .title-heading {
-    background-color: rgba(255, 255, 0, 0.4);
-    padding: 1rem;
-    width: 100%;
-    color: black;
-  }
-
-  .title-captions {
-    display: none;
-  }
-
-  .top-login-modal {
-    display: none;
-  }
-
-  .top-appear {
-    display: block;
-    position: relative;
-    z-index: 1;
-    padding: 1rem;
-    margin-top: 4rem;
-  }
-
-  .top-appear .btn {
+  .section-2 .btn {
     font-size: 2rem;
+    font-weight: 100;
     width: 10em;
-    padding: 1em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
-
-  .section-1 h1 {
-    left: 48%;
-  }
-
-  .section-1 .btn {
-    left: 48%;
-  }
-
-  .section-cards {
-    flex-direction: column;
+    padding: 0.5em;
   }
   
   .fab {
@@ -417,6 +478,76 @@ footer {
     padding-left: 13%;
     padding-right: 13%;
   }
+
+  .login-pg-body {
+    padding: 0;
+  }
+
+  .login-pg-body .container {
+    margin: 0 auto;
+    padding: 0;
+    width: 33rem;
+  }
+  
+  .login-pg-body .btn {
+    font-size: 1.5rem;
+    padding: 0.5em;
+  }
+
+  .login-modal {
+    padding: 2rem;
+  }
+
+  .login-modal label {
+    font-size: 1.5rem;
+  }
+
+  .login-modal input {
+    font-size: 2rem;
+  }
+
+  .login-social-group {
+    border-top: 2px solid white;
+    border-left: none;
+    padding: 2rem;
+  }
+
+  .login-social-group .btn-google {
+    margin-top: 1rem;
+  }
+
+  .signup-modal {
+    padding: 1rem;
+    width: 30rem;
+    margin: 0 auto;
+    border: 0.125rem solid white;
+    border-radius: 3%;
+    color: white;
+  }
+
+  .signup-modal .star-logo {
+    left: 12rem;
+  }
+
+  .signup-modal h5 {
+    text-align: center;
+    font-family: 'Bitter', serif;
+  }
+
+  .signup-modal input {
+    border-color: white;
+    font-size: 1.5rem;
+  }
+
+  .register-body .btn {
+    font-size: 1.5rem;
+    padding: 0.5em;
+  }
+
+  .social-body .btn {
+    font-size: 1.5rem;
+    padding: 0.5em;
+  }
 }
 
 /* For tablet */
@@ -425,19 +556,49 @@ footer {
     font-size: 100%
   }
 
-  .section-1 h1 {
+  .top-heading-contents {
+    display: block;
+    padding: 0;
+  }
+
+  .top-texts {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0 0 0;
+    margin-bottom: 2rem;
+  }
+
+  .top-login-modal {
+    border: none;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .section-1-contents {
+    padding: 3rem 0 3rem 4rem;
+  }
+
+  .section-1 .btn {
     font-size: 1.5rem;
+    font-weight: 100;
+  }
+
+  .section-2-contents {
+    padding: 5rem 0 5rem 3rem;
+  }
+
+  .section-2 h3 {
+    margin-bottom: 1rem;
+  }
+
+  .section-2 .btn {
+    font-size: 1.5rem;
+    font-weight: 100;
+    width: 10em;
   }
 
   .section-cards {
     flex-direction: column;
-  }
-
-  .section-1 .btn {
-    width: 17.5rem;
-  }
-
-  .section-cards {
     padding-bottom: 0;
   }
 
@@ -454,6 +615,30 @@ footer {
     width: 60%;
     margin-bottom: -10rem;
   }
+
+  .login-pg-body {
+    padding-top: 5rem;
+  }
+
+  .login-pg-body .container {
+    margin: 0 auto;
+    padding: 0;
+    width: 30rem;
+  }
+
+  .login-modal {
+    padding: 2rem;
+  }
+
+  .login-social-group {
+    border-top: 2px solid white;
+    border-left: none;
+    padding: 2rem;
+  }
+
+  .login-social-group .btn-google {
+    margin-top: 1rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -461,13 +646,41 @@ footer {
     position: relative;
     left: 38%;
   }
-  
-  .card-body {
-    left: 22rem;
-    bottom: 12.5rem;
+
+  .section-1-contents {
+    padding-right: 5rem;
+  }
+
+  .login-pg-body {
+    height: 100%;
+    min-height: 100%;
+    padding-top: 4rem;
+  }
+
+  .login-pg-body .container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+
+  .login-modal {
+    padding: 4rem;
+  }
+
+  .login-modal .btn {
+    width: 100%;
+  }
+
+  .login-social-group {
+    border-top: none;
+    border-left: 2px solid white;
+    padding: 4rem;
+  }
+
+  .login-social-group .btn-google {
+    margin-top: 2rem;
   }
 }
-
 
 /* For laptop and Desktop */
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -485,7 +698,7 @@ footer {
 /* For resolution higher */
 @media(min-width: 1281px) {
   :root {
-    font-size: 115%;
+    font-size: 120%;
   }
 
   .navbar-brand {
@@ -493,9 +706,33 @@ footer {
     left: 44%;
   }
 
+  .top-login-modal {
+    padding: 1.5rem;
+  }
+
+  .top-texts {
+    width: 50%;
+    padding: 7rem;
+  }
+
+  .top-form {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 20rem;
+  }
+
+  .section-1-contents {
+    padding-right: 8rem;
+  }
+
   .signup-modal {
     margin-top: 5rem;
     margin-bottom: 5.6rem;
+  }
+
+  .fab {
+    position: relative;
+    margin-top: 0.375rem;
   }
 
 }
