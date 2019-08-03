@@ -15,7 +15,7 @@ html, body {
 
 .nav-link {
   font-weight: bold;
-  color: #614ad3 !important;
+  color: #4569e2 !important;
 }
 
 .nav-link:hover {
@@ -32,7 +32,7 @@ html, body {
 }
 
 .top-heading-bg-image {
-  background-image: url('/images/background.jpg');
+  background-image: url('/public/images/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,7 +134,7 @@ html, body {
 }
 
 .section-1-bg-img {
-  background-image: url('/images/books-close-up.jpg');
+  background-image: url('/public/images/books-close-up.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -181,7 +181,7 @@ html, body {
 }
 
 .section-2-bg-img {
-  background-image: url("/images/toy-van-background.jpg");
+  background-image: url("/public/images/toy-van-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -344,6 +344,7 @@ hr {
 
 .login-modal {
   padding: 5rem;
+  color: white;
 }
 
 .login-modal .btn {
@@ -371,6 +372,46 @@ hr {
 .login-social-group .btn-facebook {
   background-color: rgb(112, 183, 241);
   border-color: rgb(112, 183, 241);
+}
+
+#map{
+  width: 100%;
+  height: 60%;
+  background-color: gray;
+}
+
+.contact-body {
+  min-height: 40%;
+  height: 40%;
+  background-color: #dbe8ff;
+  color: #5f5f5f;
+}
+
+.contact-body .btn {
+  /* font-size: 1rem;
+  width: 11em;
+  padding: 1em; */
+  background-color: #ec8f6a;
+  border-color: #ec8f6a;
+}
+
+.contact-body .btn:hover {
+  background-color: #4a72c8;
+  border-color: #4a72c8;
+}
+
+.contact-body h3 {
+  font-family: 'Bitter',
+  serif;
+}
+
+.phone, .address, .business-hours {
+  font-family: 'Bitter', serif;
+  padding-left: 5rem;
+}
+
+table td {
+  padding-left: 1rem;
 }
 
 footer {
@@ -548,6 +589,30 @@ footer {
     font-size: 1.5rem;
     padding: 0.5em;
   }
+
+  .contact-body {
+    min-height: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .contact-body .btn {
+    /* font-size: 1.5rem; */
+  }
+
+  .contact-body h3{
+    font-size: 3rem;
+  }
+
+  .phone, .address, .business-hours {
+    padding-left: 0;
+  }
+
+  table {
+    margin: 0 auto;
+    text-align: left;
+  }
 }
 
 /* For tablet */
@@ -638,6 +703,23 @@ footer {
 
   .login-social-group .btn-google {
     margin-top: 1rem;
+  }
+
+  .contact-body {
+    min-height: 80%;
+    height: 80%;
+    text-align: center;
+  }
+
+  table {
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .phone,
+  .address,
+  .business-hours {
+    padding-left: 0;
   }
 }
 
