@@ -1,5 +1,6 @@
 var academy;
 var map;
+
 function initMap() {
   
   academy = new google.maps.LatLng(40.782360, -73.842085);
@@ -10,11 +11,11 @@ function initMap() {
     center: academy,
     mapTypeControl: false,
     streetViewControl: false,
-    scrollwheel: false,
+    scrollwheel: true,
     zoomControl: true,
     zoomControlOptions: {
       style: google.maps.ZoomControlStyle.LARGE,
-      position: google.maps.ControlPosition.RIGHT_BOTTOM
+      position: google.maps.ControlPosition.RIGHT_CENTER
     }
   });
 

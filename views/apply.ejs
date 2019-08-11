@@ -1,0 +1,84 @@
+<%- include("partials/header.ejs")-%>
+<div class="container-fluid register-pg">
+  
+  <form action="/apply" method="POST">
+    <div class="register-modal row">
+      <div class="parent-info col-lg-6 col-md-12 col-sm-12">
+        <h3 class="mb-3">Parent's Info</h3>
+        
+        <div class="row">
+          <div class="form-group col-md-6 col-sm-6 col-6">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name">
+          </div>
+          <div class="form-group col-md-6 col-sm-6 col-6">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Phone/Cell Number</label>
+          <input type="text" class="form-control" name="address" id="inputAddress" placeholder="(123) 456-7890">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" name="address" id="inputAddress">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address</label>
+          <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6 col-sm-6 col-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" name="city" id="city">
+          </div>
+          <div class="form-group col-md-4 col-sm-4 col-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" name="state" id="state">
+          </div>
+          <div class="form-group col-md-2 col-sm-2 col-3">
+            <label for="zipcode">Zip</label>
+            <input type="text" class="form-control" name="zipcode" id="zipcode">
+          </div>
+        </div>
+      </div>
+      
+      <div class="childs-info col-lg-6 col-md-12 col-sm-12">
+        <h3>Child's info</h3>
+        
+        <div class="form-row">
+          <div class="form-group col-md-4 col-sm-4 col-4">
+            <input class="form-control" placeholder="Child's First Name">
+          </div>
+          <div class="form-group col-md-4 col-sm-4 col-4">
+            <input class="form-control" placeholder="Child's Last Name">
+          </div>
+          <div class="form-group col-md-3 col-sm-3 col-3">
+            <select class="form-control">
+              <option selected>Grade...</option>
+              <option value="kindergarten">Kindergarten</option>
+              <option value="1st">1st Grade</option>
+              <option value="2nd">2nd Grade</option>
+              <option value="1st">3rd Grade</option>
+              <option value="2nd">4th Grade</option>
+              <option value="1st">5th Grade</option>
+              <option value="2nd">6th Grade</option>
+              <option value="1st">7th Grade</option>
+              <option value="2nd">8th Grade</option>
+            </select>
+          </div>
+        </div>
+        <div id="additional-form"></div>
+        <button type="button" class="btn btn-primary" id="add-btn">Add More +</button>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <button type="submit" class="submit-btn btn btn-success">Submit</button>
+      </div>
+    </div>
+    
+  </form>
+  
+</div>
+
+<%- include("partials/footer.ejs")-%>

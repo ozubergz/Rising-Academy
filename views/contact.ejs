@@ -1,62 +1,64 @@
 <%- include("partials/header.ejs")-%>
- <div id="map"></div>
- <div class="contact-body">
-  <div class="container">
-    <div class="row">
-      <div class="phone col-lg-4 col-md-4 my-4">
-        <h3>Contact Us</h3>
-        <div>(718) 321-8021</div>
-      </div>
-      <div class="address col-lg-4 col-md-4 my-4">
-        <h3>Our Address</h3>
-        <address>
-          <div>18-25 126TH STREET</div>
-          <div>COLLEGE POINT, NY 11356</div>
-        </address>
 
-        <form id="calculate-route" action="/contact" method="GET">
-          <div class="form-group">
-            <input type="text" class="form-control" id="origin-input" name="origin" placeholder="Enter your address">
-          </div>
-        </form>
-        
-      </div>
-      <div class="business-hours col-lg-4 col-md-4 my-4">
-        <h3>Business Hours</h3>
-        <table class="openingHours">
-          <tbody>
-            <tr>
-              <th>Mon: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Tue: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Wed: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Thu: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Fri: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Sat: </th>
-              <td><span>9:00 AM - 6:00 PM</span></td>
-            </tr>
-            <tr>
-              <th>Sun: </th>
-              <td><span>Closed</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<div class="location-pg">
+  <div id="map"></div>
+
+  <div class="location-info">
+    <div class="phone">
+      <h5>Call Us</h5>
+      <div>(718) 321-8021</div>
+    </div>
+
+    <div class="address mt-5">
+      <h5>Our Address</h5>
+      <address>
+        <div>18-25 126TH STREET</div>
+        <div>COLLEGE POINT, NY 11356</div>
+      </address>
+      <form id="calculate-route" action="/contact" method="GET">
+        <div class="form-group">
+          <input type="text" class="form-control" id="origin-input" name="origin" placeholder="Enter your address">
+        </div>
+      </form>
+    </div>
+
+    <div class="business-hours mt-5">
+      <h5>Business Hours</h5>
+      <table class="openingHours">
+        <tbody>
+          <tr>
+            <th>Mon: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Tue: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Wed: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Thu: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Fri: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Sat: </th>
+            <td><span>9:00 AM - 6:00 PM</span></td>
+          </tr>
+          <tr>
+            <th>Sun: </th>
+            <td><span>Closed</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
- </div>
+
+</div>
+
 <%- include("partials/footer.ejs")-%>

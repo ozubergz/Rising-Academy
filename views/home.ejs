@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs")-%>
   
   <div class="container-fluid">
-
+    
     <div class="row">
       <div class="top-heading col-sm-12">
         <div class="top-heading-bg-image">
@@ -23,7 +23,7 @@
               <form class="top-form" action="/login" method="POST">
                 <div class="form-group">
                   <label for="login-email">Email</label>
-                  <input type="email" class="form-control" id="login-email" name="email">
+                  <input type="email" class="form-control" id="login-email" name="username">
                 </div>
                 <div class="form-group mb-5">
                   <label for="login-password">Password</label>
@@ -103,8 +103,8 @@
                 the help that we provide we ensure to all students <br>
                 that they will succeed.</p>
             </div>
-            <button type="button" class="btn btn-primary">
-              Apply</button>
+            <a href="/signup" class="btn btn-primary" role="button">
+              Apply</a>
           </div>
         </div>
       </div>
@@ -113,11 +113,11 @@
         <div class="section-2-bg-img">
           <div class="section-2-contents">
             <h1>Location</h1>
-            <h3>18-25 126th Street <br>
+            <h4>18-25 126th Street <br>
               College Point, NY 11356 <br>
-              United States</h3>
-            <button type="button" class="btn btn-primary">
-              <i class="fas fa-location-arrow"></i> Get Directions</button>
+              United States</h4>
+            <a href="/contact" class="btn btn-primary" role="button">
+              <i class="fas fa-location-arrow"></i> Get Directions</a>
           </div>
         </div>
       </div>

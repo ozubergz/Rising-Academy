@@ -15,7 +15,7 @@
   
   <!-- CSS STYLESHEETS -->
   <link rel="stylesheet" href="/public/css/styles.css">
-  
+
   <!-- BOOTSTRAP SOCIAL BUTTONS -->
   <link rel="stylesheet" href="/public/css/bootstrap-social.css">
 
@@ -24,7 +24,7 @@
     integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
   <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Crimson+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Open+Sans&display=swap" rel="stylesheet">
 
   <title>Rising Academy</title>
 </head>
@@ -44,16 +44,14 @@
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link nav-login" href="/login">Login</a>
+          
+          <a class="nav-link nav-login" href="<%= loginRoute %>"><%= loginType %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-sign-up" href="/signup">Sign up</a>
+          <a class="nav-link nav-sign-up" href="<%= signUpApplyRoute %>"><%= signUpApply %></a>
         </li>
         <li class="nav-item">
           <a class="nav-link nav-contact" href="/contact">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-apply" href="#">Apply</a>
         </li>
       </ul>
     </div>

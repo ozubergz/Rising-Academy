@@ -2,6 +2,8 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  font-family: 'Open Sans',
+  sans-serif;
 }
 
 .navbar-brand {
@@ -74,17 +76,14 @@ html, body {
   font-size: 3.5rem;
   margin-bottom: -0.187em;
   z-index: 1;
-  font-family: 'Bitter', serif;
 }
 
 .top-texts h2 {
   font-size: 2rem;
-  font-family: 'Bitter', serif;
 }
 
 .top-texts p {
-  font-size: 1rem;
-  font-family: 'Crimson Text', serif;
+  font-size: 0.8rem;
 }
 
 .top-login-modal {
@@ -99,10 +98,6 @@ html, body {
   background-color: rgba(255, 255, 255, 0.6);
   color: rgb(63, 63, 63);
   width: 18rem;
-}
-
-.top-form label {
-  font-family: 'Bitter', serif;
 }
 
 .top-form .btn {
@@ -158,17 +153,14 @@ html, body {
 
 .section-1 h1 {
   font-size: 2rem;
-  font-family: 'Bitter', serif;
 }
 
 .section-1 p {
-  font-size: 1.2rem;
-  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
 }
 
 .section-1 .btn {
-  margin-right: 1rem;
-  width: 23rem;
+  width: 23.5rem;
   font-weight: bold;
   -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
   -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
@@ -197,14 +189,9 @@ html, body {
   padding: 12rem 0 12rem 8rem;
 }
 
-.section-2 h1 {
-  font-family: 'Bitter', serif;
-}
-
 .section-2 h3 {
   margin-bottom: 1rem;
-  font-family: 'Crimson Text', serif;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .section-2 .btn {
@@ -249,7 +236,7 @@ html, body {
 
 .signup-modal h5 {
   text-align: center;
-  font-family: 'Bitter', serif;
+  font-family: serif;
 }
 
 .signup-modal input {
@@ -307,7 +294,6 @@ hr {
 }
 
 .card-body h5 {
-  font-family: 'Bitter', serif;
   font-weight: bold;
 }
 
@@ -317,8 +303,7 @@ hr {
 }
 
 .card-body p {
-  font-size: 1.3rem;
-  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
   color: rgb(73, 73, 73);
 }
 
@@ -376,42 +361,219 @@ hr {
 
 #map{
   width: 100%;
-  height: 60%;
+  height: 100%;
   background-color: gray;
 }
 
-.contact-body {
-  min-height: 40%;
-  height: 40%;
-  background-color: #dbe8ff;
+.location-pg {
+  min-height: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.location-info {
+  position: relative;
+  top: -100%;
+  width: 17rem;
+  height: 100%;
+  padding: 2rem;
+  background-color: #6c7b95c0;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.location-info input{
+  font-size: 1rem;
+}
+
+.location-info h5 {
+  border-bottom: 0.0625em solid white;
+}
+
+.register-pg {
+  background-color: #badfdb;
+  padding: 2rem;
   color: #5f5f5f;
+  font-family: 'Open Sans',
+  sans-serif;
 }
 
-.contact-body .btn {
-  /* font-size: 1rem;
-  width: 11em;
-  padding: 1em; */
-  background-color: #ec8f6a;
-  border-color: #ec8f6a;
+.register-pg h3 {
+  border-bottom: 0.5px solid white;
+  padding-bottom: 1.5rem;
 }
 
-.contact-body .btn:hover {
-  background-color: #4a72c8;
-  border-color: #4a72c8;
+.register-pg form {
+  padding-left: 4rem;
 }
 
-.contact-body h3 {
-  font-family: 'Bitter',
-  serif;
+#add-btn{
+  -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
 }
 
-.phone, .address, .business-hours {
-  font-family: 'Bitter', serif;
+.register-pg .submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+  -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+}
+
+.childs-info h3 {
+  margin-bottom: 3rem;
+}
+
+#remove-btn {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.1875rem;
+  border-radius: 100%;
+  background-color: #f67e7d;
+  border-color: #f67e7d;
+}
+
+.personal-pg {
+  background-color: #dff0ea;
+}
+
+.personal-heading {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  color: rgb(73, 73, 73);
+}
+
+.personal-body {
+  padding: 3rem;
+}
+
+.personal-pg .dropdown {
+  padding-right: 5rem; 
+}
+
+.personal-pg .dropdown p {
+  text-align: justify;
+}
+
+.personal-pg .dropdown .btn {
+  width: 100%;
+}
+
+.personal-pg .dropdown-menu {
+  width: 84%;
+}
+
+.personal-pg .right-column {
   padding-left: 5rem;
 }
 
-table td {
-  padding-left: 1rem;
+.personal-pg .right-column p {
+  text-align: justify;
+}
+
+.personal-pg .right-column .btn {
+  width: 100%;
+}
+
+.curriculum-grades {
+  margin: 0 auto;
+}
+
+.curriculum-grades h3 {
+  padding-left: 0.5rem;
+}
+
+.level-grades .circle:hover {
+  cursor: pointer;
+}
+
+.level-grades .circle {
+  font-family: 'Lexend Deca',
+  sans-serif;
+  border-radius: 100%;
+  font-size: 2em;
+  padding-top: 0.9rem;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.level-grades div:first-child {
+  background-color: #ffdcf7;
+  border: 5px solid #f76262;
+}
+
+.level-grades div:nth-child(2){
+  background-color: #ffb3b3;
+}
+
+.level-grades div:nth-child(3) {
+  background-color: #fce2ae;
+}
+
+.level-grades div:nth-child(4) {
+  background-color: #b6ffea;
+}
+
+.level-grades div:nth-child(5) {
+  background-color: #c5f0a4;
+}
+
+.level-grades div:nth-child(6) {
+  background-color: #d699a9;
+}
+
+.level-grades div:nth-child(7) {
+  background-color: #ab72c0;
+}
+
+.level-grades div:nth-child(8) {
+  background-color: #ffdd67;
+}
+
+.level-grades div:nth-child(9) {
+  background-color: #83929c;
+}
+
+.curriculum-contents {
+  background-color: rgb(202, 202, 202);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.first-content {
+  display: none;
+}
+
+.second-content {
+  display: none;
+}
+
+.third-content {
+  display: none;
+}
+
+.fourth-content {
+  display: none;
+}
+
+.fifth-content {
+  display:none
+}
+
+.sixth-content {
+  display: none;
+}
+
+.seventh-content {
+  display: none;
+}
+
+.eigth-content {
+  display: none;
 }
 
 footer {
@@ -421,6 +583,7 @@ footer {
   width: 100%;
   position: relative;
   bottom: 0;
+  clear: both;
 }
 
 /* For Mobile */
@@ -492,7 +655,7 @@ footer {
   .section-1 .btn {
     font-size: 2rem;
     font-weight: 100;
-    padding: 0.5em;
+    margin-right: 0.25rem;
   }
 
   .section-2-contents {
@@ -507,7 +670,6 @@ footer {
     font-size: 2rem;
     font-weight: 100;
     width: 10em;
-    padding: 0.5em;
   }
   
   .fab {
@@ -590,29 +752,41 @@ footer {
     padding: 0.5em;
   }
 
-  .contact-body {
+  #map {
+    width: 100%;
+    height: 50%;
+  }
+
+  .location-pg {
     min-height: 100%;
     height: 100%;
-    text-align: center;
-    font-size: 1.5rem;
   }
 
-  .contact-body .btn {
-    /* font-size: 1.5rem; */
+  .location-info {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.3rem;
   }
 
-  .contact-body h3{
-    font-size: 3rem;
+  .register-pg {
+    padding: 1rem;
   }
 
-  .phone, .address, .business-hours {
+  .register-pg form {
     padding-left: 0;
   }
 
-  table {
-    margin: 0 auto;
-    text-align: left;
+  .childs-info h3{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
+
+  .register-pg .submit-btn {
+    margin-top: 2rem;
+  }
+
 }
 
 /* For tablet */
@@ -640,7 +814,7 @@ footer {
   }
 
   .section-1-contents {
-    padding: 3rem 0 3rem 4rem;
+    padding: 3rem 1rem 3rem;
   }
 
   .section-1 .btn {
@@ -649,7 +823,7 @@ footer {
   }
 
   .section-2-contents {
-    padding: 5rem 0 5rem 3rem;
+    padding: 5rem 0 5rem 2rem;
   }
 
   .section-2 h3 {
@@ -674,8 +848,8 @@ footer {
 
   .card-body {
     position: relative;
-    bottom: 13rem;
-    left: 19rem;
+    bottom: 12.5rem;
+    left: 18rem;
     text-align: left;
     width: 60%;
     margin-bottom: -10rem;
@@ -705,21 +879,41 @@ footer {
     margin-top: 1rem;
   }
 
-  .contact-body {
-    min-height: 80%;
-    height: 80%;
-    text-align: center;
+  #map {
+    width: 100%;
+    height: 50%;
   }
 
-  table {
-    margin: 0 auto;
-    text-align: left;
+  .location-pg {
+    min-height: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
   }
 
-  .phone,
-  .address,
-  .business-hours {
+  .location-info {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    padding: 1.3rem;
+    font-size: 0.9rem;
+  }
+
+  .location-info input {
+    width: 20rem;
+  }
+
+  .register-pg form {
     padding-left: 0;
+  }
+
+  .childs-info h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .register-pg .submit-btn {
+    margin-top: 2rem;
   }
 }
 
@@ -727,6 +921,11 @@ footer {
   .navbar-brand {
     position: relative;
     left: 38%;
+  }
+
+  .card-body {
+    bottom: 12rem;
+    left: 19rem;
   }
 
   .section-1-contents {
@@ -762,6 +961,16 @@ footer {
   .login-social-group .btn-google {
     margin-top: 2rem;
   }
+
+  .register-pg {
+    padding: 2rem;
+    height: 100%;
+  }
+
+  .childs-info h3 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
 }
 
 /* For laptop and Desktop */
@@ -769,12 +978,14 @@ footer {
   :root {
     font-size: 100%; 
   }
-
   .navbar-brand {
     position: relative;
     left: 42%;
   }
 
+  .register-pg {
+    height: 100%;
+  }
 }
 
 /* For resolution higher */
@@ -815,6 +1026,14 @@ footer {
   .fab {
     position: relative;
     margin-top: 0.375rem;
+  }
+
+  .register-modal {
+    padding-top: 3rem;
+  }
+
+  .register-pg {
+    height: 100%;
   }
 
 }
