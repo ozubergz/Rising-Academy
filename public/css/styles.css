@@ -391,10 +391,12 @@ hr {
 }
 
 .register-pg {
-  background-color: #badfdb;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f090d9), to(#59d4e8));
+  background-image: -o-linear-gradient(top left, #f090d9, #59d4e8);
+  background-image: linear-gradient(to bottom right, #f090d9, #59d4e8);
   padding: 2rem;
-  color: #5f5f5f;
-  font-family: 'Open Sans',
+  color: white;
+  font-family: 'Lexend Deca',
   sans-serif;
 }
 
@@ -405,6 +407,11 @@ hr {
 
 .register-pg form {
   padding-left: 4rem;
+}
+
+.required-field::after {
+  content: " *";
+  color: rgb(195, 79, 79);
 }
 
 #add-btn{
@@ -436,49 +443,71 @@ hr {
 }
 
 .personal-pg {
-  background-color: #dff0ea;
+  background-color: rgb(240, 223, 223);
+  color: rgb(58, 58, 58);
+}
+
+.personal-pg .btn {
+  -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
+  box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
 }
 
 .personal-heading {
   padding: 1rem;
-  background-color: #f8f9fa;
-  color: rgb(73, 73, 73);
+  font-family: 'Lexend Deca',
+  sans-serif;
 }
 
 .personal-body {
   padding: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.personal-body .btn {
+  padding: 1rem;
+}
+
+.personal-body .links-group {
+  border-radius: 1rem;
 }
 
 .personal-pg .dropdown {
-  padding-right: 5rem; 
+  padding-right: 4rem;
 }
 
 .personal-pg .dropdown p {
   text-align: justify;
+  font-family: 'Lexend Deca',
+  sans-serif;
 }
 
 .personal-pg .dropdown .btn {
   width: 100%;
 }
 
-.personal-pg .dropdown-menu {
-  width: 84%;
-}
-
 .personal-pg .right-column {
-  padding-left: 5rem;
+  padding-left: 4rem;
 }
 
 .personal-pg .right-column p {
   text-align: justify;
+  font-family: 'Lexend Deca',
+  sans-serif;
 }
 
 .personal-pg .right-column .btn {
   width: 100%;
 }
 
-.curriculum-grades {
-  margin: 0 auto;
+.curriculum-group {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 15px;
+  font-family: 'Lexend Deca',
+  sans-serif;
+  color: white;
 }
 
 .curriculum-grades h3 {
@@ -494,11 +523,12 @@ hr {
   sans-serif;
   border-radius: 100%;
   font-size: 2em;
-  padding-top: 0.9rem;
+  padding-top: 1rem;
   width: 5rem;
   height: 5rem;
   text-align: center;
   font-weight: bold;
+  color: black;
 }
 
 .level-grades div:first-child {
@@ -507,7 +537,7 @@ hr {
 }
 
 .level-grades div:nth-child(2){
-  background-color: #ffb3b3;
+  background-color: #fda1a1;
 }
 
 .level-grades div:nth-child(3) {
@@ -538,10 +568,8 @@ hr {
   background-color: #83929c;
 }
 
-.curriculum-contents {
-  background-color: rgb(202, 202, 202);
-  padding: 1rem;
-  border-radius: 5px;
+.list-group-item {
+  background: none;
 }
 
 .first-content {
@@ -574,6 +602,38 @@ hr {
 
 .eigth-content {
   display: none;
+}
+
+.error-msg {
+  display: block;
+  background-color: #f1b3ae;
+  border: 1px solid rgb(224, 61, 61);
+  border-radius: 3px;
+  color: rgb(63, 63, 63);
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 0.25rem;
+  padding: 0.2rem;
+  font-weight: bold;
+}
+
+.password-err {
+  display: block;
+  background-color: #f1b3ae;
+  border: 1px solid rgb(224, 61, 61);
+  border-radius: 3px;
+  color: rgb(63, 63, 63);
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 0.25rem;
+  padding: 0.2rem;
+  font-weight: bold;
+}
+
+.valid-pass {
+  color: #6e2142;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 footer {
@@ -787,6 +847,31 @@ footer {
     margin-top: 2rem;
   }
 
+  .personal-heading {
+    padding: 0;
+  }
+
+  .personal-body {
+    padding: 0;
+  }
+
+  .personal-body .links-group {
+    border-radius: 1rem;
+  }
+
+  .personal-pg .dropdown {
+    padding-right: 2rem;
+  }
+
+  .personal-pg .dropdown-menu {
+    width: 90%;
+  }
+
+  .personal-pg .right-column {
+    padding-left: 2rem;
+  }
+
+
 }
 
 /* For tablet */
@@ -915,6 +1000,30 @@ footer {
   .register-pg .submit-btn {
     margin-top: 2rem;
   }
+
+  .personal-heading {
+    padding: 0.5rem;
+  }
+
+  .personal-body {
+    padding: 0;
+  }
+
+  .personal-body .links-group {
+    border-radius: 0.6rem;
+  }
+
+  .personal-pg .dropdown {
+    padding-right: 1rem;
+  }
+
+  .personal-pg .dropdown-menu {
+    width: 98%;
+  }
+
+  .personal-pg .right-column {
+    padding-left: 0.6rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -971,6 +1080,10 @@ footer {
     margin-top: 0;
     margin-bottom: 3rem;
   }
+
+   .personal-pg .dropdown-menu {
+     width: 95%;
+   }
 }
 
 /* For laptop and Desktop */
@@ -985,6 +1098,10 @@ footer {
 
   .register-pg {
     height: 100%;
+  }
+
+  .personal-pg .dropdown-menu {
+    width: 86%;
   }
 }
 
@@ -1034,6 +1151,10 @@ footer {
 
   .register-pg {
     height: 100%;
+  }
+
+  .personal-pg .dropdown-menu {
+    width: 84%;
   }
 
 }

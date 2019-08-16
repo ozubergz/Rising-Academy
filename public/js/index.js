@@ -21,14 +21,11 @@ var counter = new Counter();
 $("#add-btn").click((e) => {
   const inputs = `
      <div class="form-row" id="newInputs">
-        <div class="form-group col-md-4 col-sm-4 col-4">
-          <input class="form-control" placeholder="Child's First Name">
-        </div>
-        <div class="form-group col-md-4 col-sm-4 col-4">
-          <input class="form-control" placeholder="Child's Last Name">
+        <div class="form-group col-md-8 col-sm-8 col-8">
+          <input class="form-control" name="student_name" placeholder="Child's First Name">
         </div>
         <div class="form-group col-md-3 col-sm-3 col-3">
-          <select class="form-control">
+          <select name="grade" class="form-control">
             <option selected>Grade...</option>
             <option value="kindergarten">Kindergarten</option>
             <option value="1st">1st Grade</option>
@@ -59,11 +56,18 @@ $("#additional-form").on('click', '.new-btn', (e) => {
 });
 
 $('#password, #confirmPassword').on('keyup', () => {
-  if($('#password').val() === $('#confirmPassword').val()) {
+
+  if ($('#password').val().length > 8) {
+    $('.valid-pass').css('color', 'green');
+  } else {
+    $('.valid-pass').css('color', '#6e2142');
+  }
+
+  if ($('#password').val() === $('#confirmPassword').val() && $('#password').val().length > 8) {
     $('#confirmPassword').css('border-color', '#9cf196');
     $('#register-submit').attr('disabled', false);
   } else if ($('#password').val() !== $('#confirmPassword').val()) {
-    $('#confirmPassword').css('border-color', 'red')
+    $('#confirmPassword').css('border-color', 'red');
     $('#register-submit').attr('disabled', true);
   }
 });
