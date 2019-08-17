@@ -7,9 +7,12 @@ const mongoose    = require("mongoose");
 const session     = require("express-session");
 const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-const helmet      = require("helmet");
-const nodemailer  = require("nodemailer");
-const flash       = require("connect-flash");
+const helmet         = require("helmet");
+const nodemailer     = require("nodemailer");
+const flash          = require("connect-flash");
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
+const findOrCreate   = require('mongoose-findorcreate');
 
 const app = express();
 
@@ -57,7 +60,9 @@ mongoose.connect("mongodb://localhost:27017/academyUsersDB", {useNewUrlParser: t
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
-  username: {type: String, required: true},
+  username: String,
+  googleId: String,
+  facebookId: String,
   info: {
     first_name: String,
     last_name: String,
@@ -73,21 +78,64 @@ const userSchema = new mongoose.Schema({
   relations: []
 });
 
-userSchema.plugin(passportLocalMongoose) //save users into mongodb with hash and salt using passport
+//save users into mongodb with hash and salt using passport
+userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(findOrCreate);
 
-const User = new mongoose.model("users", userSchema) //create model collection "users"
+//create model collection "users"
+const User = new mongoose.model("users", userSchema);
 
 passport.use(User.createStrategy());
 
-passport.serializeUser(User.serializeUser()); //serialize id; keep track of id
-passport.deserializeUser(User.deserializeUser()); //deserialize id; makes a request to DB to find profile information
+//serialize id; keep track of id
+// passport.serializeUser(User.serializeUser());
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+
+ //deserialize id; makes a request to DB to find profile information
+ // passport.deserializeUser(User.deserializeUser());
+passport.deserializeUser(function (id, done) {
+  User.findById(id, function (err, user) {
+    done(err, user);
+  });
+});
+
+//google register oauth2
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/google/academy"
+  },
+  function (accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({
+      googleId: profile.id
+    }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
+
+//facebook register aouth2
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_APP_ID,
+    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    callbackURL: "http://localhost:3000/auth/facebook/academy"
+  },
+  function (accessToken, refreshToken, profile, cb) {
+    User.findOrCreate({
+      facebookId: profile.id
+    }, function (err, user) {
+      return cb(err, user);
+    });
+  }
+));
 
 const logoutNavBar = {
   loginType: "Login",
   loginRoute: "/login",
   signUpApply: "Sign Up",
   signUpApplyRoute: "/signup"
-  
 };
 
 const loginNavBar = {
@@ -104,6 +152,33 @@ app.get("/", function(req, res) {
     res.render("home", logoutNavBar);
   }
 });
+
+app.get('/auth/google',
+  passport.authenticate('google', {
+    scope: ['profile']
+  }));
+
+app.get('/auth/google/academy',
+  passport.authenticate('google', {
+    failureRedirect: '/login'
+  }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/personal');
+  });
+
+app.get('/auth/facebook',
+  passport.authenticate('facebook'));
+
+app.get('/auth/facebook/academy',
+  passport.authenticate('facebook', {
+    failureRedirect: '/login'
+  }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/personal');
+  });
+
 
 app.get("/contact", function (req, res) {
   let changeNavBar = req.isAuthenticated() ? loginNavBar : logoutNavBar;

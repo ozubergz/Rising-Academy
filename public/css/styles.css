@@ -108,13 +108,7 @@ html, body {
   text-decoration: none;
 }
 
-.top-form .btn-success {
-   -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
-   -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
-   box-shadow: 0.125rem 0.3125rem 0px 0px rgb(23, 53, 18);
-}
-
-.top-form .btn-primary {
+.top-form .btn {
    -webkit-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
    -moz-box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
    box-shadow: 0.125rem 0.3125rem 0px 0px rgb(43, 50, 146);
@@ -191,7 +185,6 @@ html, body {
 
 .section-2 h3 {
   margin-bottom: 1rem;
-  /* font-weight: bold; */
 }
 
 .section-2 .btn {
@@ -831,6 +824,7 @@ footer {
 
   .personal-body {
     padding: 0;
+    width: 100%;
   }
 
   .personal-body .links-group {
@@ -985,6 +979,12 @@ footer {
 
   .personal-body {
     padding: 0;
+    width: 98%;
+  }
+
+  .personal-body {
+    padding-top: 3%;
+    padding-bottom: 2%;
   }
 
   .personal-body .links-group {
@@ -1057,6 +1057,11 @@ footer {
   .childs-info h3 {
     margin-top: 0;
     margin-bottom: 3rem;
+  }
+
+  .personal-body {
+    padding-top: 5%;
+    padding-bottom: 14%;
   }
 
    .personal-pg .dropdown-menu {
