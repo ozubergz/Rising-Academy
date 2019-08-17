@@ -19,6 +19,7 @@ class Counter {
 var counter = new Counter();
 
 $("#add-btn").click((e) => {
+
   const inputs = `
      <div class="form-row" id="newInputs">
         <div class="form-group col-md-8 col-sm-8 col-8">
@@ -43,11 +44,13 @@ $("#add-btn").click((e) => {
         </div>
       </div>
     `;
+
     if (counter.increment() < 6) {
       $("#additional-form").append(inputs);
     } else {
       alert('You have reach the limit.');
     }
+
 });
 
 $("#additional-form").on('click', '.new-btn', (e) => {
@@ -72,52 +75,18 @@ $('#password, #confirmPassword').on('keyup', () => {
   }
 });
 
-function toggleContent(type) {
-  let grades = ["kinder", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eigth"];
-  let newGrades = [...grades];
-  newGrades.splice(newGrades.indexOf(type), 1);
-  $(`.${type}-content`).show()
-  $(`.${type}`).css("border", "5px solid #f76262");
-  newGrades.forEach(grade => {
-    $(`.${grade}-content`).hide();
-    $(`.${grade}`).css("border-style", "none");
-  });
-}
-
-$(".kinder").on('click', () => {
-  toggleContent("kinder");
+$(".collapse-btn").click(function() {
+  $(this).find('.fa').toggleClass('fa-plus fa-minus')
 });
 
-$(".first").on("click", ()=> {
-  toggleContent("first");
+$(".circle").on('click', function() {
+
+  //toggle border-style circle
+  $(this).css("border", "5px solid #f76262");
+  $(this).siblings("div").css("border", "none")
+
+  //toggle hide or show
+  let target = $(this).data('linked');
+  $(target).siblings("div").hide();
+  $(target).show();
 });
-
-$(".second").on("click", ()=> {
-  toggleContent("second");
-});
-
-$(".third").on("click", () => {
-  toggleContent("third");
-});
-
-$(".fourth").on("click", () => {
-  toggleContent("fourth");
-});
-
-$(".fifth").on("click", () => {
-  toggleContent("fifth");
-});
-
-$(".sixth").on("click", () => {
-  toggleContent("sixth");
-});
-
-$(".seventh").on("click", () => {
-  toggleContent("seventh")
-});
-
-$(".eigth").on("click", () => {
-  toggleContent("eigth");
-});
-
-

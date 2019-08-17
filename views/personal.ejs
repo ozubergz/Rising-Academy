@@ -13,19 +13,19 @@
     </div>
     
     <div class="personal-body">
-      <div class="nyc-calender-link mb-3">
+      <div class="nyc-calender-link">
         <a role="button" target="_blank" class="btn btn-primary" href="https://www.schools.nyc.gov/calendar">NYC Department of
           Education Calender</a>
       </div>
       
-      <div class="row links-group my-5">
-        <div class="dropdown col-md-6 my-5">
+      <div class="row links-group my-3">
+        <div class="dropdown col-md-6 mt-5">
           <p>Rising Academy cares about students' education, so
             we provided links of various websites that are educational 
             for you and your kids. Some of these websites provide free 
             printable worksheets of fun activities, math, english, and 
             other subjects for your kids to do at home. Click the button below.</p>
-          <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+          <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" data-flip="false">
             Recommended sites to checkout
           </button>
           <div class="dropdown-menu">
@@ -44,7 +44,7 @@
             <a class="dropdown-item" target="_blank" href="https://www.math-aids.com/">https://www.math-aids.com</a>
           </div>
         </div>
-        <div class="right-column col-md-6 my-5">
+        <div class="right-column col-md-6 mt-5">
           <p>Nowadays, students are taking more tests than ever before. Most students are not well prepared to take the New York State Test (ELA and Mathematics NYST). We are lucky enough that NY state releases latest practice test every year to prepare students for the test. Click button below to see for yourself.</p>
           <a role="button" target="_blank" class="btn btn-success" href="https://www.engageny.org">ELA and Mathematics State Test</a>
         </div>
@@ -54,42 +54,53 @@
         <h2>What your kids will learn in Rising Academy</h2>
         <h5>Curriculum Objectives in Rising Academy</h5>
         <div class="curriculum-group">
-          <div class="level-grades row">
-            <div class="circle kinder m-3">K</div>
-            <div class="circle first m-3">1st</div>
-            <div class="circle second m-3">2nd</div>
-            <div class="circle third m-3">3rd</div>
-            <div class="circle fourth m-3">4th</div>
-            <div class="circle fifth m-3">5th</div>
-            <div class="circle sixth m-3">6th</div>
-            <div class="circle seventh m-3">7th</div>
-            <div class="circle eigth m-3">8th</div>
+          <div class="grade-group row">
+            <div class="circle m-2" data-linked="#kinder">K</div>
+            <div class="circle m-2" data-linked="#first">1st</div>
+            <div class="circle m-2" data-linked="#second">2nd</div>
+            <div class="circle m-2" data-linked="#third">3rd</div>
+            <div class="circle m-2" data-linked="#fourth">4th</div>
+            <div class="circle m-2" data-linked="#fifth">5th</div>
+            <div class="circle m-2" data-linked="#sixth">6th</div>
+            <div class="circle m-2" data-linked="#seventh">7th</div>
+            <div class="circle m-2" data-linked="#eigth">8th</div>
           </div>
-          <div class="curriculum-contents">
-            <div class="kinder-content">
+          <div class="grade-info-group">
+            <div id="kinder">
               <h3 class="text-center">Kindergarten</h3>
               <h5>ELA</h5>
               <p>We teach the mechanics of reading–students and explicit phonics instruction. Students are taught
                 spelling, grammar, and writing. These are the primary tools for decoding written English. Students will
                 learned all of the sound‐spelling correspondences in the English language and are able to decode written
                 material they encounter.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Listening</li>
-                <li class="list-group-item">Nursery Rhymes</li>
-                <li class="list-group-item">Stories</li>
-                <li class="list-group-item">Spelling/Forming words</li>
-                <li class="list-group-item">Blending syllable</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne" aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Listening</li>
+                  <li class="list-group-item">Nursery Rhymes</li>
+                  <li class="list-group-item">Stories</li>
+                  <li class="list-group-item">Spelling/Forming words</li>
+                  <li class="list-group-item">Blending syllable</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>The first day of kindergarten is long anticipated by parents and young students. The goal of kindergarten
                 math curriculum is to prepare children for first grade math.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Counting and place value</li>
-                <li class="list-group-item">Addition and subtraction</li>
-                <li class="list-group-item">Measurement and geometry</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+              aria-expanded="false" aria-controls="collapseListTwo">Curriculum <i
+              class="fa fa-plus fa-xs"></i></button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Counting and place value</li>
+                  <li class="list-group-item">Addition and subtraction</li>
+                  <li class="list-group-item">Measurement and geometry</li>
+                </ul>
+              </div>
             </div>
-            <div class="first-content">
+            <div id="first"   style="display: none">
               <h3 class="text-center">1st Grade</h3>
               <h5>ELA</h5>
               <p>First-grade language art builds on the skills of writing and reading,
@@ -97,212 +108,309 @@
                 We move them from reading readiness to actual reading skills.
                 It also aims to expand their written skills from letters and
                 words to complete sentences and complex thoughts.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Recognize digraphs, sound blends, diphthongs</li>
-                <li class="list-group-item">Pronounce word endings</li>
-                <li class="list-group-item">Create group of rhyming words</li>
-                <li class="list-group-item">Count the number of syllables in words</li>
-                <li class="list-group-item">Spelling words, identify contractions</li>
-                <li class="list-group-item">Decipher meaning of words</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">Curriculum <i
+                  class="fa fa-plus fa-xs"></i></button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Recognize digraphs, sound blends, diphthongs</li>
+                  <li class="list-group-item">Pronounce word endings</li>
+                  <li class="list-group-item">Create group of rhyming words</li>
+                  <li class="list-group-item">Count the number of syllables in words</li>
+                  <li class="list-group-item">Spelling words, identify contractions</li>
+                  <li class="list-group-item">Decipher meaning of words</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>Math for first grade curriculum are number sense and operations,
                 algebra, geometry and spatial sense, measurement, and data analysis
                 and probability. They are all critical lessons for first grade
                 math curriculum.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Place value</li>
-                <li class="list-group-item">Numbers 0 to 120</li>
-                <li class="list-group-item">Ones and tens</li>
-                <li class="list-group-item">Addition within 20</li>
-                <li class="list-group-item">Subtraction within 20</li>
-                <li class="list-group-item">Time</li>
-                <li class="list-group-item">Length and size</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+              aria-expanded="false" aria-controls="collapseListTwo">Curriculum <i
+              class="fa fa-plus fa-xs"></i></button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Place value</li>
+                  <li class="list-group-item">Numbers 0 to 120</li>
+                  <li class="list-group-item">Ones and tens</li>
+                  <li class="list-group-item">Addition within 20</li>
+                  <li class="list-group-item">Subtraction within 20</li>
+                  <li class="list-group-item">Time</li>
+                  <li class="list-group-item">Length and size</li>
+                </ul>
+              </div>
+              
             </div>
-            <div class="second-content">
+            <div id="second"  style="display: none">
               <h3 class="text-center">2nd Grade</h3>
               <h5>ELA</h5>
               <p>Second grade english is more progress in reading and language arts. Second graders will be reading and
                 understanding language arts with more developing vocabulary words. They will be writing competently. Second grade
                 students are expected to be progressive in development of reading comprehension.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Developing more word vocabulary</li>
-                <li class="list-group-item">Using punctuation appropriately</li>
-                <li class="list-group-item">Experiencing a variety of literary genres</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne" aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Developing more word vocabulary</li>
+                  <li class="list-group-item">Using punctuation appropriately</li>
+                  <li class="list-group-item">Experiencing a variety of literary genres</li>
+                </ul>
+              </div>
+              
               <h5 class="mt-4">Math</h5>
               <p>Second grade will start exploring numbers in the real world around us - understanding the use of money in
                 real life situations. Second grade will focus on solving problems involving addition and subtraction and more.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Hundreds</li>
-                <li class="list-group-item">Adding 1s and 10s</li>
-                <li class="list-group-item">Substracting 1s and 10s</li>
-                <li class="list-group-item">Addition with 100 and 1000</li>
-                <li class="list-group-item">Subtraction within 100 and 1000</li>
-                <li class="list-group-item">Money</li>
-                <li class="list-group-item">Word problems</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo" aria-expanded="false" aria-controls="collapseListTwo">
+                  Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Hundreds</li>
+                  <li class="list-group-item">Adding 1s and 10s</li>
+                  <li class="list-group-item">Substracting 1s and 10s</li>
+                  <li class="list-group-item">Addition with 100 and 1000</li>
+                  <li class="list-group-item">Subtraction within 100 and 1000</li>
+                  <li class="list-group-item">Money</li>
+                  <li class="list-group-item">Word problems</li>
+                </ul>
+              </div>
+              
             </div>
-            <div class="third-content">
+            <div id="third"   style="display: none">
               <h3 class="text-center">3rd Grade</h3>
               <h5>ELA</h5>
               <p>Third graders learn prewriting strategy. In this grade, they will now understand the formula for writing process.
                 Third grade is the first step in learning how to write for a particular audience. They will expand more in
                 vocabulary to create more in-depth sentences. They will be reading more with fluency and with focus on
                 comprehension</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Prewriting strategy</li>
-                <li class="list-group-item">Formula writing process</li>
-                <li class="list-group-item">Write more persuasively</li>
-                <li class="list-group-item">Write more in-depth sentences</li>
-                <li class="list-group-item">Focus reading comprehension</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Prewriting strategy</li>
+                  <li class="list-group-item">Formula writing process</li>
+                  <li class="list-group-item">Write more persuasively</li>
+                  <li class="list-group-item">Write more in-depth sentences</li>
+                  <li class="list-group-item">Focus reading comprehension</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>Third grade is the year of better math skill development. They will now learn how to multiply and divide with
                 multi-digit numbers by a single-digit number. At this point, they will understand simple fractions and decimals.
               </p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Multiplication</li>
-                <li class="list-group-item">Division</li>
-                <li class="list-group-item">Estimation</li>
-                <li class="list-group-item">Fractions/Decimals</li>
-                <li class="list-group-item">Area</li>
-                <li class="list-group-item">Perimeter</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Multiplication</li>
+                  <li class="list-group-item">Division</li>
+                  <li class="list-group-item">Estimation</li>
+                  <li class="list-group-item">Fractions/Decimals</li>
+                  <li class="list-group-item">Area</li>
+                  <li class="list-group-item">Perimeter</li>
+                </ul>
+              </div>
             </div>
-            <div class="fourth-content">
+            <div id="fourth"  style="display: none">
               <h3 class="text-center">4th Grade</h3>
               <h5>ELA</h5>
               <p>Fourth grade is the year of higher progress in reading, writing and language arts. Reading in fourth grade is
                 higher level of fluency and expression. Students will utilize root words, prefixes, suffixes, and context clues to
                 analyze unfamiliar words. They will apply comprehension strategies to literary texts. Focus on cause and effect.
               </p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Higher level of fluency</li>
-                <li class="list-group-item">Root words, prefixes, suffixes, and context clues</li>
-                <li class="list-group-item">Comprehension strategies to literary texts</li>
-                <li class="list-group-item">Formulate multiple paragraph</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Higher level of fluency</li>
+                  <li class="list-group-item">Root words, prefixes, suffixes, and context clues</li>
+                  <li class="list-group-item">Comprehension strategies to literary texts</li>
+                  <li class="list-group-item">Formulate multiple paragraph</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>Fourth grade deals with bigger numbers. They will add and subtract large numbers with sums up to 1,000,000. They
                 will
                 complete basic multiplication and division problems. Understand more basic fraction and decimal concepts.
                 They will recognize and identify more basic geometrical vocabulary.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Write expanded form and written form</li>
-                <li class="list-group-item">Rounding whole numbers</li>
-                <li class="list-group-item">Adding and subtracting multi-digit numbers</li>
-                <li class="list-group-item">Multiply 2-digit numbers</li>
-                <li class="list-group-item">Division with place value</li>
-                <li class="list-group-item">Factors and mulitples</li>
-                <li class="list-group-item">Prime and Composite numbers</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Write expanded form and written form</li>
+                  <li class="list-group-item">Rounding whole numbers</li>
+                  <li class="list-group-item">Adding and subtracting multi-digit numbers</li>
+                  <li class="list-group-item">Multiply 2-digit numbers</li>
+                  <li class="list-group-item">Division with place value</li>
+                  <li class="list-group-item">Factors and mulitples</li>
+                  <li class="list-group-item">Prime and Composite numbers</li>
+                </ul>
+              </div>
             </div>
-            <div class="fifth-content">
+            <div id="fifth"   style="display: none">
               <h3 class="text-center">5th Grade</h3>
               <h5>ELA</h5>
               <p>We teach 5th graders on how to apply comprehension strategies to literary texts. They will understand literary
                 techniques such as summarizing, plot identification, main idea, theme, cause and effect, compare and contrast,
                 fact vs. opinion, and making inferences.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Proficiency is reading skills</li>
-                <li class="list-group-item">Comprehension strategies to literary genres</li>
-                <li class="list-group-item">Main Idea vs. Theme</li>
-                <li class="list-group-item">Understanding Author's purpose</li>
-                <li class="list-group-item">Write appropriately in composition assignments</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Proficiency is reading skills</li>
+                  <li class="list-group-item">Comprehension strategies to literary genres</li>
+                  <li class="list-group-item">Main Idea vs. Theme</li>
+                  <li class="list-group-item">Understanding Author's purpose</li>
+                  <li class="list-group-item">Write appropriately in composition assignments</li>
+                </ul>
+              </div>
               <h5 class="mt-5">Math</h5>
               <p>Fifth graders should be proficient using addition, subtraction, multiplication, and division. They will learn
                 basic algebraic functions such as exponents and order of operations. Apply geometric concepts to solve problems,
                 and use various methods of measurement with skill.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Decimal place value</li>
-                <li class="list-group-item">Adding and subtracting decimals</li>
-                <li class="list-group-item">Common denominators</li>
-                <li class="list-group-item">Adding and subtracting fractions with unlike denominatros</li>
-                <li class="list-group-item">Adding and subtracting mix numbers</li>
-                <li class="list-group-item">Multiply/Dividing fractions</li>
-                <li class="list-group-item">Algebra</li>
-                <li class="list-group-item">Volume</li>
-                <li class="list-group-item">Multiply and Divide decimals</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Decimal place value</li>
+                  <li class="list-group-item">Adding and subtracting decimals</li>
+                  <li class="list-group-item">Common denominators</li>
+                  <li class="list-group-item">Adding and subtracting fractions with unlike denominatros</li>
+                  <li class="list-group-item">Adding and subtracting mix numbers</li>
+                  <li class="list-group-item">Multiply/Dividing fractions</li>
+                  <li class="list-group-item">Algebra</li>
+                  <li class="list-group-item">Volume</li>
+                  <li class="list-group-item">Multiply and Divide decimals</li>
+                </ul>
+              </div>
             </div>
-            <div class="sixth-content">
+            <div id="sixth"   style="display: none">
               <h3 class="text-center">6th Grade</h3>
               <h5>ELA</h5>
               <p>In 6th grade, students explore more comprehensive reading texts. 6th graders will have better understanding in
                 writing and reading. They will read closely to textual details. They will make evidence-based argument essays.
                 They will be searching literary texts to have deepen understanding of english literacy.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Writing better evidence based essays</li>
-                <li class="list-group-item">Finding contextual evidence in literary texts</li>
-                <li class="list-group-item">Further searching for themes and main idea of literary texts</li>
-                <li class="list-group-item">Deeper understanding of literary arts</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Writing better evidence based essays</li>
+                  <li class="list-group-item">Finding contextual evidence in literary texts</li>
+                  <li class="list-group-item">Further searching for themes and main idea of literary texts</li>
+                  <li class="list-group-item">Deeper understanding of literary arts</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>6th grade is the first year of middle school, and they will get introduced to new mathematic problems. It is the
                 first year for students to learn mathematics that are usually primer to prepare them for high school. Students
                 will more complex fractions, decimals, exponents and pre-algebra.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Ratios, rates, & percentages</li>
-                <li class="list-group-item">Arithmetic operations</li>
-                <li class="list-group-item">Adding, subtracting, dividing, and multiplying decimals</li>
-                <li class="list-group-item">Exponents</li>
-                <li class="list-group-item">Least and Greatest common factor</li>
-                <li class="list-group-item">Negative numbers</li>
-                <li class="list-group-item">Equations & inequlaties</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Ratios, rates, & percentages</li>
+                  <li class="list-group-item">Arithmetic operations</li>
+                  <li class="list-group-item">Adding, subtracting, dividing, and multiplying decimals</li>
+                  <li class="list-group-item">Exponents</li>
+                  <li class="list-group-item">Least and Greatest common factor</li>
+                  <li class="list-group-item">Negative numbers</li>
+                  <li class="list-group-item">Equations & inequlaties</li>
+                </ul>
+              </div>
             </div>
-            <div class="seventh-content">
+            <div id="seventh" style="display: none">
               <h3 class="text-center">7th Grade</h3>
               <h5>ELA</h5>
               <p>Seventh graders will develop more complex writing skills.
                 They will write constructive critique of their own and other’s writing. Improve grammar, and syntax skills.
                 They will read with fluency, with focus on comprehension.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Improve complex writing skills</li>
-                <li class="list-group-item">Improve writing syntax skills</li>
-                <li class="list-group-item">Apply and recognize grade standard vocabulary</li>
-                <li class="list-group-item">Read with focus on comprehension</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Improve complex writing skills</li>
+                  <li class="list-group-item">Improve writing syntax skills</li>
+                  <li class="list-group-item">Apply and recognize grade standard vocabulary</li>
+                  <li class="list-group-item">Read with focus on comprehension</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>7th grade math students will be expected to learn the order of operations to solve problems using
                 parenthesis, exponents, multiplication, division, addition and subtraction. They will learn about
                 proportional relationships using tables, graphs, and “constant ratio” relationships to solve and explain problems.
               </p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Additing, subtracting, multiplying and dividing negative numbers</li>
-                <li class="list-group-item">Converting fractions to decimals</li>
-                <li class="list-group-item">Percentages</li>
-                <li class="list-group-item">Adding & subtracting ration numbers</li>
-                <li class="list-group-item">Rates & proportional relationships</li>
-                <li class="list-group-item">Expressions, equations, & inequlaties</li>
-                <li class="list-group-item">Order of operations</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Additing, subtracting, multiplying and dividing negative numbers</li>
+                  <li class="list-group-item">Converting fractions to decimals</li>
+                  <li class="list-group-item">Percentages</li>
+                  <li class="list-group-item">Adding & subtracting ration numbers</li>
+                  <li class="list-group-item">Rates & proportional relationships</li>
+                  <li class="list-group-item">Expressions, equations, & inequlaties</li>
+                  <li class="list-group-item">Order of operations</li>
+                </ul>
+              </div>
             </div>
-            <div class="eigth-content">
+            <div id="eigth"   style="display: none">
               <h3 class="text-center">8th Grade</h3>
               <h5>ELA</h5>
               <p>8th grade is the last year before students are entered into highschool. Our agenda for 8th graders is to prepare
                 themselves academically before they reach 9th grade. We teach proficiency in grade standards to ensure that
                 students be prepared and ready in literacy before their last year of middle school.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Students gain more comprehension to evaluate complex information, ideas, and evidence</li>
-                <li class="list-group-item">Formal english writing that can be recognize by high school instructors</li>
-                <li class="list-group-item">Write logical arguments based on author's claims</li>
-                <li class="list-group-item">Improve explanatory texts and narratives</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListOne"
+                aria-expanded="false" aria-controls="collapseListOne">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListOne">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Students gain more comprehension to evaluate complex information, ideas,
+                    and evidence</li>
+                  <li class="list-group-item">Formal english writing that can be recognize by high school instructors
+                  </li>
+                  <li class="list-group-item">Write logical arguments based on author's claims</li>
+                  <li class="list-group-item">Improve explanatory texts and narratives</li>
+                </ul>
+              </div>
               <h5 class="mt-4">Math</h5>
               <p>Students continue to hone their skill of solving equations. 8th grade students will become more efficient in
                 math. Solve equations in one variable. At this point 8th grade will become well equiped to be ready for high
                 school.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Numbers and operations</li>
-                <li class="list-group-item">Solve equations with on variable</li>
-                <li class="list-group-item">Linear functions and equations</li>
-                <li class="list-group-item">Systems of equations</li>
-              </ul>
+              <button class="collapse-btn" type="button" data-toggle="collapse" data-target="#collapseListTwo"
+                aria-expanded="false" aria-controls="collapseListTwo">
+                Curriculum <i class="fa fa-plus fa-xs"></i>
+              </button>
+              <div class="collapse" id="collapseListTwo">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Numbers and operations</li>
+                  <li class="list-group-item">Solve equations with on variable</li>
+                  <li class="list-group-item">Linear functions and equations</li>
+                  <li class="list-group-item">Systems of equations</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

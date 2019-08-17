@@ -443,7 +443,7 @@ hr {
 }
 
 .personal-pg {
-  background-color: rgb(240, 223, 223);
+  background-color: rgb(239, 248, 233);
   color: rgb(58, 58, 58);
 }
 
@@ -514,57 +514,68 @@ hr {
   padding-left: 0.5rem;
 }
 
-.level-grades .circle:hover {
+.collapse-btn {
+  background: none;
+  border: none;
+  color: rgb(180, 208, 255);
+}
+
+.collapse-btn:focus {
+  border: none;
+  outline: none;
+}
+
+.grade-group .circle:hover {
   cursor: pointer;
 }
 
-.level-grades .circle {
+.grade-group .circle {
   font-family: 'Lexend Deca',
   sans-serif;
   border-radius: 100%;
-  font-size: 2em;
-  padding-top: 1rem;
-  width: 5rem;
-  height: 5rem;
+  font-size: 1.5em;
+  padding-top: 0.9rem;
+  width: 4rem;
+  height: 4rem;
   text-align: center;
   font-weight: bold;
   color: black;
 }
 
-.level-grades div:first-child {
+.grade-group div:first-child {
   background-color: #ffdcf7;
   border: 5px solid #f76262;
 }
 
-.level-grades div:nth-child(2){
+.grade-group div:nth-child(2) {
   background-color: #fda1a1;
 }
 
-.level-grades div:nth-child(3) {
+.grade-group div:nth-child(3) {
   background-color: #fce2ae;
 }
 
-.level-grades div:nth-child(4) {
+.grade-group div:nth-child(4) {
   background-color: #b6ffea;
 }
 
-.level-grades div:nth-child(5) {
+.grade-group div:nth-child(5) {
   background-color: #c5f0a4;
 }
 
-.level-grades div:nth-child(6) {
+.grade-group div:nth-child(6) {
   background-color: #d699a9;
 }
 
-.level-grades div:nth-child(7) {
+.grade-group div:nth-child(7) {
   background-color: #ab72c0;
 }
 
-.level-grades div:nth-child(8) {
+.grade-group div:nth-child(8) {
   background-color: #ffdd67;
 }
 
-.level-grades div:nth-child(9) {
+.grade-group div:nth-child(9) {
   background-color: #83929c;
 }
 
@@ -572,68 +583,35 @@ hr {
   background: none;
 }
 
-.first-content {
-  display: none;
-}
-
-.second-content {
-  display: none;
-}
-
-.third-content {
-  display: none;
-}
-
-.fourth-content {
-  display: none;
-}
-
-.fifth-content {
-  display:none
-}
-
-.sixth-content {
-  display: none;
-}
-
-.seventh-content {
-  display: none;
-}
-
-.eigth-content {
-  display: none;
-}
-
 .error-msg {
-  display: block;
-  background-color: #f1b3ae;
-  border: 1px solid rgb(224, 61, 61);
-  border-radius: 3px;
+  background-color: rgb(241, 151, 151);
+  border: 1px solid red;
   color: rgb(63, 63, 63);
-  text-align: center;
-  font-size: 0.9em;
+  font-size: 0.8em;
   margin-top: 0.25rem;
-  padding: 0.2rem;
-  font-weight: bold;
+  padding: 0.4rem;
 }
 
 .password-err {
-  display: block;
-  background-color: #f1b3ae;
-  border: 1px solid rgb(224, 61, 61);
-  border-radius: 3px;
-  color: rgb(63, 63, 63);
+  background-color: rgb(241, 151, 151);
+  border: 1px solid red;
+  color: rgb(73, 73, 73);
+  font-size: 0.8rem;
+  margin-top: 0.25em;
+  padding: 0.4em;
+}
+
+.invalid-msg {
+  background-color: rgb(241, 151, 151);
+  border: 1px solid red;
+  color: rgb(73, 73, 73);
+  padding: 0.4rem;
   text-align: center;
-  font-size: 0.9em;
-  margin-top: 0.25rem;
-  padding: 0.2rem;
-  font-weight: bold;
 }
 
 .valid-pass {
   color: #6e2142;
   font-size: 0.8rem;
-  font-weight: bold;
 }
 
 footer {
@@ -1101,7 +1079,7 @@ footer {
   }
 
   .personal-pg .dropdown-menu {
-    width: 86%;
+    width: 83%;
   }
 }
 
@@ -1154,7 +1132,7 @@ footer {
   }
 
   .personal-pg .dropdown-menu {
-    width: 84%;
+    width: 87%;
   }
 
 }

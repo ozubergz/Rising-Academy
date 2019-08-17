@@ -13,6 +13,9 @@
           <label for="login-password">Password</label>
           <input type="password" class="form-control" id="login-password" name="password">
         </div>
+        <% if(error.length > 0) { %>
+            <div class="invalid-msg mb-2"><%= error %></div>
+        <% } %>
         <button type="submit" class="btn btn-success login-btn">Login</button>
       </form>
     </div>

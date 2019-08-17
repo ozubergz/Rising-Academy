@@ -1,15 +1,15 @@
 //jshint esversion:6
 require('dotenv').config();
-const express = require("express");
-const ejs = require("ejs");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const session = require("express-session");
-const passport = require("passport");
+const express     = require("express");
+const ejs         = require("ejs");
+const bodyParser  = require("body-parser");
+const mongoose    = require("mongoose");
+const session     = require("express-session");
+const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-const helmet = require("helmet");
-const nodemailer = require("nodemailer");
-const flash = require("connect-flash");
+const helmet      = require("helmet");
+const nodemailer  = require("nodemailer");
+const flash       = require("connect-flash");
 
 const app = express();
 
@@ -126,7 +126,7 @@ app.route("/signup")
     User.findOne({username: req.body.username}, function(err, user) {
       if(err) { console.log(err) }
       if (user) { 
-        req.flash("error", " A user with the given email is already registered.");
+        req.flash("error", "A user with the given email is already registered.");
       }
       const newUser = new User({ username: req.body.username });
       User.register(newUser, req.body.password, function (err, user) {
@@ -147,11 +147,12 @@ app.route("/login")
   .get(function(req, res) {
     res.render("login", logoutNavBar);
   })
-  .post(passport.authenticate('local',
-  {failureRedirect: "/login"}),
-    function(req, res) {
+  .post(passport.authenticate('local', {
+    failureRedirect: "/login",
+    failureFlash: "Invalid username or password."
+  }), function(req, res) {
       req.login(req.user, function(err) {
-        if(err) console.log(err);
+        if(err) console.log(err) 
         res.redirect('/personal');
       });
   });
