@@ -4,7 +4,7 @@ const express     = require("express");
 const ejs         = require("ejs");
 const bodyParser  = require("body-parser");
 const mongoose    = require("mongoose");
-const session     = require("express-session");
+const session = require("cookie-session");
 const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const helmet         = require("helmet");
@@ -41,7 +41,7 @@ app.set("view engine", "ejs"); //set ejs
 //setting session ID cookie
 app.use(session({
   secret: process.env.SECRET,
-  resave: true,
+  resave: false,
   saveUninitialized: true
 }));
 
@@ -301,34 +301,3 @@ app.route("/apply")
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server listening on port is success.");
 });
-
-
-    // async function main() {
-    //   let from = process.env.SMTP_USER,
-    //     to = process.env.SMTP_USER,
-    //     subject = `Welcome to Rising Academy`;
-
-    //   let transporter = nodemailer.createTransport({
-    //     host: process.env.HOSTNAME,
-    //     secureConnection: true,
-    //     port: 465,
-    //     auth: {
-    //       user: process.env.SMTP_USER,
-    //       pass: process.env.SMTP_PASSWORD
-    //     }
-    //   });
-
-    //   // send mail with defined transport object
-    //   let info = await transporter.sendMail({
-    //     from: from, // sender address
-    //     to: to, // list of receivers
-    //     subject: subject, // Subject line
-    //     text: "Hello world?", // plain text body
-    //     html: "<b>Click the link to verify your email</b>" // html body
-    //   });
-
-    //   console.log("Message sent: %s", info.messageId);
-    //   console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    // }
-
-    // main().catch(console.error);
