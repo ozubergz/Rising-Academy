@@ -41,8 +41,8 @@ app.set("view engine", "ejs"); //set ejs
 //setting session ID cookie
 app.use(session({
   secret: process.env.SECRET,
-  resave: false,
-  saveUninitialized: false
+  resave: true,
+  saveUninitialized: true
 }));
 
 app.use(passport.initialize()); //initialize passport
