@@ -110,7 +110,7 @@ passport.deserializeUser(function (id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/academy"
+    callbackURL: "http://mydomain:3000/auth/google/academy"
   },
   function (accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
