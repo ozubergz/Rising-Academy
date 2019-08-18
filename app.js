@@ -299,7 +299,7 @@ app.route("/apply")
 });
 
 app.listen(process.env.PORT || 3000, function() {
-  console.log("Server is listening on port success.");
+  console.log("Server listening on port is success.");
 });
 
 
