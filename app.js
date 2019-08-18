@@ -4,7 +4,8 @@ const express     = require("express");
 const ejs         = require("ejs");
 const bodyParser  = require("body-parser");
 const mongoose    = require("mongoose");
-const session = require("cookie-session");
+const session     = require("express-session");
+const MongoStore = require('connect-mongo')(session);
 const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const helmet         = require("helmet");
@@ -42,7 +43,8 @@ app.set("view engine", "ejs"); //set ejs
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: false,
+  store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
 app.use(passport.initialize()); //initialize passport
@@ -59,6 +61,7 @@ app.use(function(req, res, next) {
 mongoose.connect(`mongodb+srv://jmin:${process.env.ATLAS_PASSWORD}@cluster0-a08fp.mongodb.net/academyUsers`, {
   useNewUrlParser: true
 });
+
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
