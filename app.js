@@ -56,7 +56,9 @@ app.use(function(req, res, next) {
 });
 
 //Connect to mongodb with mongoose and create db name
-mongoose.connect("mongodb://localhost:27017/academyUsersDB", {useNewUrlParser: true}); 
+mongoose.connect(`mongodb+srv://jmin:${process.env.ATLAS_PASSWORD}@cluster0-a08fp.mongodb.net/academyUsers`, {
+  useNewUrlParser: true
+});
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
