@@ -42,8 +42,8 @@ app.set("view engine", "ejs"); //set ejs
 //setting session ID cookie
 app.use(session({
   secret: process.env.SECRET,
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
   store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
