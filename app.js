@@ -125,7 +125,7 @@ passport.use(new GoogleStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/academy"
+    callbackURL: "https://serene-gorge-44988.herokuapp.com/auth/facebook/academy"
   },
   function (accessToken, refreshToken, profile, cb) {
     User.findOrCreate({
