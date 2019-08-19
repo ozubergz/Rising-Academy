@@ -5,7 +5,7 @@ const ejs         = require("ejs");
 const bodyParser  = require("body-parser");
 const mongoose    = require("mongoose");
 const session     = require("express-session");
-const MongoStore  = require('connect-mongo')(session);
+// const MongoStore  = require('connect-mongo')(session);
 const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const helmet         = require("helmet");
@@ -43,8 +43,8 @@ app.set("view engine", "ejs"); //set ejs
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
-  saveUninitialized: false,
-  store: new MongoStore({mongooseConnection: mongoose.connection})
+  saveUninitialized: false
+  // store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
 app.use(passport.initialize()); //initialize passport
