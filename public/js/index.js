@@ -87,6 +87,39 @@ $(".circle").on('click', function() {
 
   //toggle hide or show
   let target = $(this).data('linked');
-  $(target).siblings("div").hide();
-  $(target).show();
+  // $(target).siblings("div").hide();
+  $(target).collapse('show');
+});
+
+//page reloads to the top of the page
+$(window).on('beforeunload', function () {
+  $(this).scrollTop(0);
+});
+
+//load images
+$(window).on("load", function() {
+  const img1 = new Image();
+  $(img1).attr({
+    src: 'public/images/math.png',
+    class: "card-img-top",
+    alt: "Card geometry image"
+  });
+  $('.img1').append(img1);
+
+  const img2 = new Image();
+  $(img2).attr({
+    src: "public/images/teach.png",
+    alt: "Card teach image",
+    class: "card-img-top"
+  });
+  $('.img2').append(img2);
+
+  const img3 = new Image();
+  $(img3).attr({
+    src: "public/images/book-boy.png",
+    class: "card-img-top",
+    alt: "Card Boy Reading image"
+  });
+  $('.img3').append(img3);
+
 });
