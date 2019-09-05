@@ -87,7 +87,7 @@ $(".circle").on('click', function() {
 
   //toggle hide or show
   let target = $(this).data('linked');
-  // $(target).siblings("div").hide();
+  $(target).siblings("div").hide();
   $(target).collapse('show');
 });
 
