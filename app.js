@@ -241,16 +241,12 @@ app.get("/logout", function(req, res) {
 });
 
 app.get("/personal", function(req, res) {
-  res.render("personal", loginNavBar)
-})
-
-// app.get("/personal", function(req, res) {
-//   if(req.isAuthenticated()) {
-//     res.render("personal", loginNavBar);
-//   } else {
-//     res.redirect("/login");
-//   }
-// });
+  if(req.isAuthenticated()) {
+    res.render("personal", loginNavBar);
+  } else {
+    res.redirect("/login");
+  }
+});
 
 app.route("/apply")
 .get(function(req, res) {
