@@ -87,8 +87,9 @@ $(".circle").on('click', function() {
 
   //toggle hide or show
   let target = $(this).data('linked');
+  $(target).show();
   $(target).siblings("div").hide();
-  $(target).collapse('show');
+  
 });
 
 //page reloads to the top of the page
