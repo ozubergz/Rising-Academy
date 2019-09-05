@@ -814,8 +814,13 @@ footer {
     margin-bottom: 1rem;
   }
 
+  #add-btn {
+    font-size: 1.3rem;
+  }
+
   .register-pg .submit-btn {
     margin-top: 2rem;
+    font-size: 1.5rem;
   }
 
   .personal-heading {
