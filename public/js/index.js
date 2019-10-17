@@ -101,7 +101,7 @@ $(window).on('beforeunload', function () {
 $(window).on("load", function() {
   const img1 = new Image();
   $(img1).attr({
-    src: 'public/images/math.png',
+    src: 'https://rising-academy.s3.amazonaws.com/math.png',
     class: "card-img-top",
     alt: "Card geometry image"
   });
@@ -109,7 +109,7 @@ $(window).on("load", function() {
 
   const img2 = new Image();
   $(img2).attr({
-    src: "public/images/teach.png",
+    src: "https://rising-academy.s3.amazonaws.com/teach.png",
     alt: "Card teach image",
     class: "card-img-top"
   });
@@ -117,7 +117,7 @@ $(window).on("load", function() {
 
   const img3 = new Image();
   $(img3).attr({
-    src: "public/images/book-boy.png",
+    src: "https://rising-academy.s3.amazonaws.com/book-boy.png",
     class: "card-img-top",
     alt: "Card Boy Reading image"
   });

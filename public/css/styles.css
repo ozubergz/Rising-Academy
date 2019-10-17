@@ -34,10 +34,11 @@ html, body {
 }
 
 .top-heading-bg-image {
-  background-image: url('/public/images/background.jpg');
+  background-image: url("https://rising-academy.s3.amazonaws.com/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 100%;
 }
 
 .top-heading-overlay {
@@ -123,7 +124,7 @@ html, body {
 }
 
 .section-1-bg-img {
-  background-image: url('/public/images/books-close-up.jpg');
+  background-image: url('https://rising-academy.s3.amazonaws.com/books-close-up.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -167,7 +168,7 @@ html, body {
 }
 
 .section-2-bg-img {
-  background-image: url("/public/images/toy-van-background.jpg");
+  background-image: url("https://rising-academy.s3.amazonaws.com/toy-van-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

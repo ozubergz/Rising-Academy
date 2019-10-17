@@ -30,7 +30,7 @@ app.use(helmet.contentSecurityPolicy({
     ],
     scriptSrc: ["'self'", 'code.jquery.com', 'cdnjs.cloudflare.com', 'stackpath.bootstrapcdn.com', 'maps.googleapis.com', 'ajax.googleapis.com'],
     fontSrc: ["'self'", 'fonts.googleapis.com', 'use.fontawesome.com', 'fonts.gstatic.com'],
-    imgSrc: ["'self'", 'data:', 'maps.gstatic.com', 'maps.googleapis.com']
+    imgSrc: ["'self'", 'data:', 'maps.gstatic.com', 'maps.googleapis.com', 'https://rising-academy.s3.amazonaws.com']
   }
 }));
 
