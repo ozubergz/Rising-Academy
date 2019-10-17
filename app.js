@@ -8,7 +8,6 @@ const session     = require("express-session");
 const passport    = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const helmet         = require("helmet");
-const nodemailer     = require("nodemailer");
 const flash          = require("connect-flash");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
