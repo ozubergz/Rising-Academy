@@ -10,4 +10,4 @@ A website for an afterschool called Rising Academy, which provides parents to si
 
 Demo - (https://vimeo.com/392114745)
 
-![](https://s4.gifyu.com/images/Feb-16-2020-18-20-24.gif)
+[![RisingAcademy.gif](https://s5.gifyu.com/images/Feb-19-2020-11-14-10.gif)](https://gifyu.com/image/74en)
